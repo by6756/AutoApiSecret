@@ -79,6 +79,12 @@ def main():
         if req.get(r'https://graph.microsoft.com/v1.0/sites/root',headers=headers).status_code == 200:
             num1+=1
             print('11调用成功'+str(num1)+'次')
+        if req.get(r'https://graph.microsoft.com/v1.0/sites/root/drives',headers=headers).status_code == 200:
+            num1+=1
+            print('12调用成功'+str(num1)+'次')
+        if req.get(r'https://graph.microsoft.com/v1.0/me/people',headers=headers).status_code == 200:
+            num1+=1
+            print('13调用成功'+str(num1)+'次')            
             print('此次运行结束时间为 :', localtime)  
     except:
         print("pass")
